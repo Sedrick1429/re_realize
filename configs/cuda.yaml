@@ -1,0 +1,11 @@
+# 基于default.yaml的GPU优化版本
+data:
+  batch_size: 16          # 加倍
+  num_workers: 8          # 加倍
+
+model:
+  d_model: 256            # 加倍
+  d_prime: 1024           # 加倍
+
+device:
+  mixed_precision: true   # 启用混合精度训练
