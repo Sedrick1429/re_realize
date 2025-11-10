@@ -1,0 +1,68 @@
+# Pose Magic 依赖包配置文件
+# 适用于Python 3.8+ (已升級至 Py3.11 和 Torch 2.3.1)
+
+# ==================== 核心深度学习框架 ====================
+# [已升級] PyTorch 2.3.1 (cu121)
+torch==2.3.1
+torchvision==0.18.0
+torchaudio==2.3.1
+
+# ==================== 图神经网络库 ====================
+# [已升級] 移除版本鎖定，將由 setup.sh 中的 find-links 處理
+torch-geometric
+torch-scatter
+torch-sparse
+torch-cluster
+torch-spline-conv
+
+# ==================== Mamba SSM库 ====================
+# [已升級] 移除版本鎖定
+mamba-ssm
+causal-conv1d
+
+# ==================== 数据处理库 ====================
+# [已升級] 移除版本鎖定
+numpy
+scipy
+scikit-learn
+h5py
+pandas
+
+# ==================== 可视化库 ====================
+# [已升級] 移除版本鎖定
+matplotlib
+tensorboard
+wandb
+
+# ==================== 实用工具库 ====================
+# [已升級] 移除版本鎖定
+tqdm
+pyyaml
+requests
+pynvml
+
+# ==================== 开发工具 ====================
+# [已升級] 移除版本鎖定
+pytest
+black
+flake8
+isort
+
+# ==================== 可选：性能分析 ====================
+fvcore
+memory-profiler
+
+# ==================== 可选：混合精度训练 ====================
+apex
+
+# ==================== 可选：ONNX导出 ====================
+onnx
+onnxruntime
+
+# ==================== 可选：量化部署 ====================
+#torch-quantization
+
+# 版本固定说明：
+# torch==2.3.1   - 已升級
+# numpy           - 已升級
+# cuda版本將由 setup.sh 指定為 cu121

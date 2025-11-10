@@ -1,0 +1,53 @@
+#Pose Magic 默认配置
+#========== 数据参数 ==========
+
+data:
+data_dir: "./data/processed"
+batch_size: 8
+num_workers: 4
+seq_len: 243
+train_subjects: ['S1', 'S5', 'S6', 'S7', 'S8']
+test_subjects: ['S9', 'S11']
+#========== 模型参数 ==========
+
+model:
+num_layers: 26
+d_model: 128
+d_prime: 512
+num_joints: 17
+k_neighbors: 2
+causal: false
+#========== 训练参数 ==========
+
+train:
+epochs: 90
+lr: 8e-4
+weight_decay: 0.01
+lr_decay_gamma: 0.99
+gradient_clip: 1.0
+warmup_epochs: 5
+#========== 损失函数参数 ==========
+
+loss:
+lambda_vel: 0.1
+lambda_acc: 0.01
+#========== 设备参数 ==========
+
+device:
+device_type: "cuda" # cuda 或 cpu
+cuda_device: 0
+num_gpus: 1
+mixed_precision: false
+#========== 日志参数 ==========
+
+logging:
+log_dir: "./logs"
+tensorboard: true
+save_freq: 10 # 每N个epoch保存一次
+eval_freq: 1 # 每N个epoch评估一次
+#========== 检查点 ==========
+
+checkpoint:
+save_dir: "./checkpoints"
+save_best: true
+save_last: true

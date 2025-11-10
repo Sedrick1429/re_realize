@@ -1,0 +1,11 @@
+#preprocess的使用方法：
+#python data/preprocess.py --raw-dir <raw_data> --output-dir ./data/processed
+
+#util中config管理文件内容：
+#from utils.config import Config, load_config_from_args
+
+# 方法1: 直接加载
+#config = Config('configs/default.yaml')
+
+# 方法2: 从命令行加载
+#config = load_config_from_args()
